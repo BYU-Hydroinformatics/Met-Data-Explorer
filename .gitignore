@@ -8,7 +8,6 @@
 *.sqlite
 *.DS_Store
 .idea/
-services.yml
 docs/_build
 docs/_static
 docs/templates

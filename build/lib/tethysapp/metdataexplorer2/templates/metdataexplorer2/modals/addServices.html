@@ -1,0 +1,127 @@
+{% load staticfiles %}
+
+<div id="modalAddServices" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content myModal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add a Thredds Server File</h4>
+            </div>
+            <div class="modal-body">
+              <form id="modalAddServiceForm">
+
+                <br>
+                <label for="addService-title">Title (Required):</label>
+                <input type="text" class="form-control" name="addService-title" id="addService-title" placeholder="Please enter a valid Title">
+                <label for="addService-description"> Description (Required): </label>
+                <textarea name="textarea" rows="10" cols="50" class="form-control" name="addService-description" id="addService-description" placeholder="Please enter a valid Description"></textarea>
+                <!-- <input type="text" class="form-control" name="addGroup-description" id="addGroup-description" placeholder="Please enter a valid description for the HydroServer Group"> -->
+                <br>
+                <div class="form-row hidden">
+                  <label for="epsg-input" style="float: left;">EPSG Code (Required):
+                    <button id= "btn-info-epsg" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-info-sign"></span></button>
+                  </label>
+                  <input id="epsg-input" class="form-control">
+                  <p id="info-epsg" class="hidden">
+                    <em>The EPSG Code input bar you can define a shift in coordinates. First, add the EPSG code (eg. 4326) followed by “,x:” amount to shift in x “,y:” amount to shift in y.
+                      So a fully formatted EPSG code with a shift defined would look like this: 4326,x:360,y:180. This would shift all the coordinates in your geojson feature 360 degrees to
+                      the right and 180 degrees up. Be careful when computing the amount by which to shift your coordinates. For example, longitude coordinates from -180 to 180
+                      to match a gridded dataset with longitude coordinates from 0 to 360, the coordinates would need to be shifted by 360 and not just by 180.</em>
+                  </p>
+
+
+                  <!-- <label for="spatial-input" style="float: left;">Spatial Extents: </label>
+                  <br>
+                  <input id="spatial-input" class="form-control">
+
+                  <div class = "buttons_spatial">
+                      <button id="upload-shape-resource" type="button" class="btn btn-info button_h">Upload Shapefile</button>
+                      <button id="draw-on-map-button" type="button" class="btn btn-info button_h">Draw on Map</button>
+                      <button id="link-geoserver" type="button" class="btn btn-info button_h">Geoserver</button>
+                  </div> -->
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3 form-group" id = "littleSearch">
+                        <div class="input_url">
+                          <label for="url">
+                            THREDDS Catalog Endpoint/URL (Required):<button id= "btn-info-tdsURL" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-info-sign"></span></button>
+                          </label>
+                          <div class="buttons_url">
+                            <input type="text" class="form-control" name="url" id="url">
+                            <button id= "btn-check_available_serv" type="button" class="btn btn-info"><span class="glyphicon glyphicon-arrow-right"></span></button>
+                          </div>
+
+                        </div>
+
+                    </div>
+                    <p id="info-tdsURL" class="hidden">
+                      <em>An endpoint ending in catalog.html or catalog.xml is required. OPENDAP endpoints will not work since the app extract that information from the TDS catalog endpoint</em>
+                    </p>
+
+                    <img id="loading-group" class="view-file hidden" src="{% static 'metdataexplorer2/images/loading.gif' %}" />
+                </div>
+
+                <div id= "vars_search" class="form-row hidden">
+                  <div class="col-md-12 mb-3 form-group hidden" id="metadata_available">
+                    <div id="file-info-div">
+                      <div class = "variables_times">
+                        <label for="variable-input">Variables:</label>
+                        <select id="variable-input" class="selectpicker" data-live-search="false" data-width="fit" data-size="mini" data-style="btn-info"></select>
+                      </div>
+                      <div class = "variables_times">
+                        <label for="time" >Time:</label>
+                        <select id="time" class="selectpicker" data-live-search="false" data-width="fit" data-size="mini" data-style="btn-info"></select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row" id = "groups_variables_div">
+                  <div style="width: 100%; flex-direction: column;">
+                    <b style="float: left; font-size: 11pt; color: #333; padding-top: 25px;">Variables:</b><br>
+                    <div style="display: flex; flex-direction: row; width: 100%;">
+                      <!-- <input id="add-attribute" class="inputsty"> -->
+                      <input type="text" id="add-attribute" class= "form-control" placeholder="Search for variable" title="Type in a variable">
+
+                      <button id="select-all-button" type="button" class="btn btn-info" data-select="true"><span class="glyphicon glyphicon-unchecked"></span></button>
+                    </div>
+                    <br>
+
+                    <div id="table_wrapper">
+                      <table id="attributes_table" class="table table-hover table-condensed">
+                        <thead>
+                          <tr>
+                            <th scope="col">Select</th>
+                            <th scope="col">Variable</th>
+                            <th scope="col">Dimensions</th>
+                          </tr>
+                        </thead>
+                        <tbody id="attributes">
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+
+                <img id="loading-add-service" class="view-file hidden" src="{% static 'metdataexplorer2/images/loading.gif' %}" />
+
+                <div class="warning"> </div>
+
+              </form>
+            </div>
+            <div class="button-group">
+                <button id="btn-link-authentication" class="btn btn-info" data-auth="false"> Link Authentication Credentials</button>
+            </div>
+            <div class="modal-footer">
+                <div class="button-group">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" id="btn-add-addServiceToTable" class="btn btn-success" data-dismiss="modal"> Add Thredds File</button>
+                    <button type="button" id="btn-add-addService2" class="btn btn-success hidden" data-dismiss="modal"> Add Thredds File</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

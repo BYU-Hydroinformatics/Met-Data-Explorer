@@ -1,0 +1,53 @@
+{% load staticfiles %}
+
+<div id="modalStyleInfo" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content myModal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Customize Layer Style</h4>
+            </div>
+            <div class="modal-body">
+              <form id="modalLayerForm">
+                <div id="layer-display-container">
+                  <div>
+                    <b style="font-size: 10.5pt; margin-top: 10px">Set Layer Opacity</b>
+                    <input type="range" min="0" max="1" value="1" step="0.01" class="slider" id="opacity-slider">
+                    <br>
+
+                    <span><b>Opacity Value: </b></span><span id = "opacityValue"> 100 </span> <span> % </span>
+                  </div>
+                  <br>
+                  <div>
+                    <label for="wmslayer-style">Select Color Style</label>
+                    <select id="wmslayer-style" class = "selectpicker" data-style="btn-primary">
+                      <option value="boxfill/rainbow">RAINBOW</option>
+                      <option value="boxfill/occam">OCCAM</option>
+                      <option value="boxfill/alg">ALG</option>
+                      <option value="boxfill/alg2">ALG2</option>
+                      <option value="boxfill/ncview">NC VIEW</option>
+                      <option value="boxfill/redblue">RED BLUE</option>
+                    </select>
+                  </div>
+                  <br>
+                  <div id="bounds_share">
+                    <label for="wmslayer-bounds" style="">Set Data Bounds</label>
+                    <input id="wmslayer-bounds" value="0,25">
+                    <div id="button_for_bounds">
+                      <button id= "get_data_values" type="button" class="btn btn-info btn-sm">Get Data Bounds</button>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+                <div class="button-group">
+                    <button id="apply_config" type="button" class="btn btn-success" data-dismiss="modal">Apply</button>
+
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

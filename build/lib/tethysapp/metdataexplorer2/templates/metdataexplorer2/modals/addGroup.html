@@ -1,0 +1,52 @@
+{% load staticfiles %}
+
+<div id="modalAddGroupThredds" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content myModal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add a Catalog of Thredds Servers</h4>
+            </div>
+            <div class="modal-body">
+              <form id="modalAddGroupServerForm">
+
+                <br>
+                <label for="addGroup-title">Title (Required):</label>
+                <input type="text" class="form-control" name="addGroup-title" id="addGroup-title" placeholder="Please enter a valid Title">
+                <label for="addGroup-description"> Description (Required): </label>
+                <textarea name="textarea" rows="10" cols="50" class="form-control" name="addGroup-description" id="addGroup-description" placeholder="Please enter a valid Description"></textarea>
+                <!-- <input type="text" class="form-control" name="addGroup-description" id="addGroup-description" placeholder="Please enter a valid description for the HydroServer Group"> -->
+                <br>
+                <h4 class="modal-title">Add Thredds Files to the Catalog</h4>
+
+                <div class="title_buttons">
+                  <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalAddServices"> <span class="glyphicon glyphicon-plus"></span></button>
+                  <button id = "remove_varaible" class="btn btn-danger" type="button" data-toggle="modal"> <span class="glyphicon glyphicon-trash"></span></button>
+                </div>
+
+                <table id= "added_thredds_files" class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="hidden">#</th>
+                      <th scope="col">Check</th>
+                      <th scope="col">Thredds File</th>
+                      <th scope="col">Variables</th>
+                    </tr>
+                  </thead>
+                  <tbody id = "added_thredds_files_table_body">
+                  </tbody>
+                </table>
+
+              </form>
+            </div>
+            <img id="loading-add-group" class="view-file hidden" src="{% static 'metdataexplorer2/images/loading.gif' %}" />
+            <div class="modal-footer">
+                <div class="button-group">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" id="btn-add-addGroup" class="btn btn-success">Create Group</button>
+                    <button id= "btn-check_all" type="button" class="btn btn-primary hidden">Select All Variables</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
