@@ -433,7 +433,7 @@ var addServiceToTable = function () {
       notify_user_info('Please Select a THREDDS File from the given file/folder structure');
       return false
     }
-    var url = $('#url').val();
+    var url = $('#url').val().trim();
     var timestamp = 'false';
     let units = 'false';
     let color = 'false';
@@ -757,7 +757,7 @@ var addFileMetadata = function (fileMetadata) {
 
 var getFoldersAndFiles = function () {
   let request_obj = {
-    url: $("#url").val()
+    url: $("#url").val().trim();
   }
   $('#name-in-form').attr('data-type', 'folder');
   $('#loading-add-service').removeClass("hidden");

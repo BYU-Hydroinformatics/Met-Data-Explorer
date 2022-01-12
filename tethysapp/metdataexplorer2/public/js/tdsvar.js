@@ -477,7 +477,7 @@ var addSingleThreddsServer = function () {
       notify_user_danger('Please Select a THREDDS File from the given file/folder structure');
       return false
     }
-    var url = $('#url').val();
+    var url = $('#url').val().trim();
     var timestamp = 'false';
     let units = 'false';
     let color = 'false';
