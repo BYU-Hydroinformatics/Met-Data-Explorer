@@ -757,7 +757,7 @@ var addFileMetadata = function (fileMetadata) {
 
 var getFoldersAndFiles = function () {
   let request_obj = {
-    url: $("#url").val().trim();
+    url: $("#url").val().trim(),
   }
   $('#name-in-form').attr('data-type', 'folder');
   $('#loading-add-service').removeClass("hidden");
