@@ -54,7 +54,6 @@
 {% block app_content %}
 
   <div id="map" class="map"></div>
-  <!-- <table id="tableLegend"></table> -->
 
 <div id ="graph" class="hidden">
   <img id="graphAddLoading" class="view-file hidden" alt="loading gif" src="{% static 'metdataexplorer2/images/loading.gif' %}">
@@ -186,6 +185,7 @@
   {% include "metdataexplorer2/modals/dimensions.html" %}
   {% include "metdataexplorer2/modals/folders.html" %}
   {% include "metdataexplorer2/modals/authentication.html" %}
+  {% include "metdataexplorer2/modals/shapefileList.html" %}
 
 {% endblock %}
 

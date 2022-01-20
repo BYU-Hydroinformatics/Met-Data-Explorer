@@ -76,3 +76,15 @@ class Groups(Base):
     def __init__(self, name, description):
         self.name = name
         self.description = description
+
+
+class Shapefiles(Base):
+    __tablename__ = 'shapefiles'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(100))
+    geometry = Column(JSON)
+
+    def __init__(self, name, geometry):
+        self.name = name
+        self.geometry = geometry

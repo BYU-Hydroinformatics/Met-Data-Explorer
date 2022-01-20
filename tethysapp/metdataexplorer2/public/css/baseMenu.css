@@ -1,0 +1,128 @@
+#display_wms_graphs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#graph {
+    flex: 1 1 90%;
+    order: 2;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#options {
+    margin: 0 0 0 0;
+    padding-left: 2%;
+    flex: 1 1 30%;
+    order: 1;
+    width: 100%;
+    height: 100%;
+}
+
+#options span, #options i {
+    font-weight: bold;
+}
+
+#plots {
+    flex: 1 1 90%;
+}
+
+#plots2 {
+    display: flex;
+    flex: 1 1 70%;
+    order: 3;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 0 0 0 0;
+}
+
+#controlGraphs {
+    flex: 1 1 10%;
+    display: flex;
+    flex-direction: row
+}
+
+#update_graphs {
+    height: 70%;
+}
+
+#carouselExampleIndicators {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding: 1% 1% 1% 1%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#graphAddLoading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.controlGraphs2 {
+    flex: 1 1 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.carousel-control.left {
+    background-image: none;
+    top: 0%;
+    height: 5%;
+}
+
+.carousel-control.right {
+    background-image: none;
+    top: 0%;
+    height: 5%;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 2%;
+}
+
+.carousel-indicators {
+    top: 1%;
+    height: fit-content;
+}
+
+.carousel-indicators .active {
+    background-color: #d9534f;
+}
+
+.carousel-indicators li {
+    background-color: #1b95dc;
+}
+
+.carousel-control .golang {
+    color: #f7f7f7;
+    padding: 1vw;
+    background: #5cb85c;
+    width: auto;
+    height: auto;
+    box-sizing: content-box;
+}
+
+.div_hor {
+    display: flex;
+    flex-direction: row;
+}
+
+.type_shp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

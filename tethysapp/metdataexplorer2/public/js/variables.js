@@ -284,7 +284,8 @@ var chosen_method_spatial = function (method_draw) {
   }
   if (method_draw == 'upload_shp') {
     $(".leaflet-draw-section").hide();
-    $('#externalSPTL_modal').modal("show");
+    $('#shapefileList').modal("show");
+    //$('#externalSPTL_modal').modal("show");
     type_of_series = 'shape';
     drawnItems.clearLayers();
     try {

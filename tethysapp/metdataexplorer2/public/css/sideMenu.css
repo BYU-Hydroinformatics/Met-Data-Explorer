@@ -1,0 +1,219 @@
+#groups_thredds {
+    margin-top: 1.5em;
+}
+
+#current-GroupThredds {
+    width: 100%;
+    height: 100%;
+}
+
+#current-GroupThredds ul {
+    display: block;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+}
+
+#current-GroupThredds li {
+    display: block;
+    opacity: 1;
+    border-color: #d3d3d3;
+    border-width: 1px;
+    border-style: solid;
+    color: #555555;
+    font-weight: normal;
+    position: relative;
+    list-style: none;
+    cursor: default;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: left;
+}
+
+#accordion {
+    margin: auto;
+    max-width: 500px;
+    overflow-y: scroll;
+}
+
+#btn-r-reset {
+    display: none;
+}
+
+#collapseCP {
+    border-radius: 0.25em;
+}
+
+#panel-bodyh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.50em;
+    margin-top: 1em;
+}
+
+#panHydroGroups {
+    background-color: #5a6268;
+}
+
+#table_div {
+    overflow-y: scroll
+}
+
+.logo_institucion {
+    display: flex;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.logo_institucion img {
+    width: 200px;
+}
+
+.titleh {
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+    justify-content: center;
+    color: white;
+    background-color: #5a6268;
+}
+
+.group-name {
+    color: #FFFFFF;
+    padding: 0em;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.server-name, .variable-name {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-right: 10%;
+    margin-left: 2%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.server-name:hover {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #bbbbbb;
+    cursor: pointer;
+}
+
+.panel-heading a {
+    display: block;
+    position: relative;
+    font-weight: bold;
+    &
+    ::after {
+        content: "";
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotate(45deg);
+    }
+    &
+    [aria-expanded="true"]::after {
+        transform: rotate(-135deg);
+        top: 5px;
+    }
+}
+
+.panel {
+    border-color: none !important;
+    border: none !important;
+}
+
+.panel-title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.panel-body, .panel-heading {
+    padding: 0px;
+}
+
+.panel-heading.buttonAppearance {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    background: #286090 !important;
+    border-color: #204d74 !important;
+    color: white;
+    transition: all 0.2s linear 0s;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.10em;
+    padding-right: 0.10em;
+}
+
+.panel-heading.buttonAppearance h4 {
+    width: 100%;
+    align-items: center;
+    margin-left: 2%;
+    display: flex;
+}
+
+.ui-state-default.buttonAppearance {
+    display: flex;
+    height: auto;
+    width: 100%;
+    background: #286090 !important;
+    border: 0px;
+    border-color: #286090 !important;
+    color: white;
+    transition: all 0.2s linear 0s;
+    justify-content: flex-end;
+}
+
+.iconhydro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5a6268;
+    padding: 0.5em;
+    color: white;
+}

@@ -793,8 +793,8 @@ var get_tdds_list_for_group = function () {
                   "</td>" +
                   "</tr>"
             }
-            HSTableHtml += "</tbody></table>"
-            $modalDelete.find(".modal-body").html(HSTableHtml)
+            HSTableHtml += "</tbody></table>";
+            $modalDelete.find(".modal-body").html(HSTableHtml);
           }
         } catch (e) {
           notify_user_danger('We are having an error trying to get the list of servers that are in the group');

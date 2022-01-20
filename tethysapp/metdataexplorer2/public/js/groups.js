@@ -551,7 +551,7 @@ var addServiceToTable = function () {
           }
         }
         html += `<tr>
-                      <td class = "attrbute_name">
+                      <td class = "attribute_name">
                         <label>${variables_list[i]}</label>
                       </td>
                       <td>

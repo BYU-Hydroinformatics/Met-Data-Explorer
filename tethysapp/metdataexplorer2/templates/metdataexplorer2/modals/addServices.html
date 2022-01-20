@@ -15,7 +15,6 @@
                 <input type="text" class="form-control" name="addService-title" id="addService-title" placeholder="Please enter a valid Title">
                 <label for="addService-description"> Description (Required): </label>
                 <textarea name="textarea" rows="10" cols="50" class="form-control" name="addService-description" id="addService-description" placeholder="Please enter a valid Description"></textarea>
-                <!-- <input type="text" class="form-control" name="addGroup-description" id="addGroup-description" placeholder="Please enter a valid description for the HydroServer Group"> -->
                 <br>
                 <div class="form-row hidden">
                   <label for="epsg-input" style="float: left;">EPSG Code (Required):
@@ -28,17 +27,6 @@
                       the right and 180 degrees up. Be careful when computing the amount by which to shift your coordinates. For example, longitude coordinates from -180 to 180
                       to match a gridded dataset with longitude coordinates from 0 to 360, the coordinates would need to be shifted by 360 and not just by 180.</em>
                   </p>
-
-
-                  <!-- <label for="spatial-input" style="float: left;">Spatial Extents: </label>
-                  <br>
-                  <input id="spatial-input" class="form-control">
-
-                  <div class = "buttons_spatial">
-                      <button id="upload-shape-resource" type="button" class="btn btn-info button_h">Upload Shapefile</button>
-                      <button id="draw-on-map-button" type="button" class="btn btn-info button_h">Draw on Map</button>
-                      <button id="link-geoserver" type="button" class="btn btn-info button_h">Geoserver</button>
-                  </div> -->
                 </div>
                 <br>
                 <div class="form-row">
@@ -81,7 +69,6 @@
                   <div style="width: 100%; flex-direction: column;">
                     <b style="float: left; font-size: 11pt; color: #333; padding-top: 25px;">Variables:</b><br>
                     <div style="display: flex; flex-direction: row; width: 100%;">
-                      <!-- <input id="add-attribute" class="inputsty"> -->
                       <input type="text" id="add-attribute" class= "form-control" placeholder="Search for variable" title="Type in a variable">
 
                       <button id="select-all-button" type="button" class="btn btn-info" data-select="true"><span class="glyphicon glyphicon-unchecked"></span></button>

@@ -1,0 +1,152 @@
+/* folders.html */
+#available_services {
+    overflow-x: scroll;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#filetree-div {
+    height: 300px;
+    cursor: pointer;
+}
+
+#btn-uplevel {
+    justify-content: flex-end;
+}
+
+.folder, .file {
+    display: flex;
+    flex-direction: row;
+}
+
+/* addGroup.html */
+.title_buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* addService.html */
+#table_wrapper, #table_wrapper2 {
+    overflow-x: scroll;
+    width: 100%;
+    height: 300px;
+}
+
+#file-info-div {
+    display: flex;
+    flex-direction: row;
+}
+
+#littleSearch {
+    display: flex;
+    width: 100%;
+}
+
+#loading-group {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+}
+
+.buttons_url {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+}
+
+.input_url {
+    width: 100%;
+}
+
+.variables_times {
+    display: flex;
+    flex: 1 1 50%;
+    flex-direction: column;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    justify-content: center;
+}
+
+/* addVariable.html */
+
+
+/* dimensions.html */
+#metadata_att_dropdown {
+    height: 300px;
+}
+
+.attribute_name {
+    word-wrap: break-word;
+    min-width: 160px;
+    max-width: 160px;
+    white-space: normal;
+}
+
+/* addServices.html */
+#addService-description {
+    height: 150px;
+}
+
+#groups_variables_div {
+    display: none;
+}
+
+#btn-link-authentication {
+    margin: 1.5em;
+}
+
+/* configureStyle.html */
+#bounds_share {
+    display: flex;
+}
+
+#wmslayer-bounds {
+    margin-right: 1.5em;
+    margin-left: 1em;
+}
+
+#button_for_bounds {
+    display: flex;
+}
+
+/* edit_tdds.html */
+.loading_id {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+/* group_info.html */
+#pop-up_description2 h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* shapefileList.html */
+#btn-add-shapefile {
+    width: 50%;
+}
+
+#btn-add-geoserver {
+    width: 50%;
+}
+
+/* vars_filters.html */
+#groups_variables {
+    height: 500px;
+    width: 100%;
+}
+
+.searchBars {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}

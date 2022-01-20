@@ -778,7 +778,8 @@ var check_for_same_names = function (type_level, title_to_check) {
   return check_nene;
 }
 
-var addAttribute = function (attribute, dimensionString) { //, units, color) {
+/*
+var vertical_buttons = function (attribute, dimensionString) { //, units, color) {
   let options = '';
   let html = ''
   let count = $('.attr-checkbox').length;
@@ -828,6 +829,7 @@ var addAttribute = function (attribute, dimensionString) { //, units, color) {
   }
   return html;
 }
+*/
 
 var get_metadata_button = function (attribute) {
   let table_content = '<table id = "table_metadata" class="table table-hover table-responsive table-sm"><thead><tr>'
